@@ -5,6 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_7ПрСизов"
         mc:Ignorable="d"
-        Title="Сизов Художества" Height="450" Width="800" MinHeight="450" MinWidth="800">
-    <Canvas Name="canvasPanel" Background="White"/>
+        Title="Сизов Художества" Height="500" Width="800" MinHeight="550" MinWidth="800">
+    <Canvas Name="canvasPanel" Background="White" Margin="0,0,0,-48">
+        <Grid Height="492" Width="217" Canvas.Left="573" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="56*"/>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="54*"/>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="52*"/>
+                <RowDefinition Height="39*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="34*"/>
+            </Grid.RowDefinitions>
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,10,15,18" Grid.Row="1" Name = "textbox2"/>
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,9,15,10" Grid.Row="0" Name = "textbox1" />
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,13,15,11" Grid.Row="4" Name = "textbox5"/>
+            <TextBox TextWrapping="Wrap" Text = "1" Grid.Row="3" Margin="147,18,10,7" Name = "textbox4" />
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,9,15,10" Grid.Row="5" Name = "textbox6" />
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,9,15,10" Grid.Row="6" Name = "textbox7" />
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,9,15,10" Grid.Row="7" Name = "textbox8" />
+            <TextBox TextWrapping="Wrap" Text = "1" Margin="142,9,15,10" Grid.Row="2" Name = "textbox3" />
+
+
+            <Label Content="Центр окружность&#xD;&#xA; X" Margin="3,4,75,10" Grid.Row="0"/>
+            <Label Content="диаметр" Margin="3,4,75,10" Grid.Row="2"/>
+            <Label Content="Центр окружность&#xA; Y" Margin="3,4,75,10" Grid.Row="1"/>
+            <Label Content="Центр треугольника&#xA; X" Margin="3,9,75,5" Grid.Row="3"/>
+            <Label Content="Центр треугольника&#xA; Y" Margin="3,4,75,10" Grid.Row="4"/>
+            <Label Content="длина a" Margin="3,4,75,10" Grid.Row="5"/>
+            <Label Content="длина b" Margin="3,4,75,10" Grid.Row="6"/>
+            <Label Content="длина c" Margin="3,4,75,10" Grid.Row="7"/>
+            <Button Content="Расчет" Margin="33,6,45,5" Grid.Row="8" Click="Button_Click"/>
+        </Grid>
+
+    </Canvas>
 </Window>

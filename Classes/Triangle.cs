@@ -29,29 +29,41 @@ namespace _7ПрСизов.Classes
                 MessageBox.Show("такого треугольника не бывает!");
                 return;
             }
-            double ma = 0.5 * Math.Sqrt(2 * b * b + 2 * c * c - a * a);
-            double ra = (2.0 / 3.0) * ma;
+
 
             Polygon triangle = new Polygon();
+            if (a * a + b * b == c * c || b *b + c * c == a * a || c * c + a * a == b * b)
+            {
+                double xc = centerX - a / 3.0;
+                double yc = centerY - b / 3.0;
+                double xa = centerX + 2*a / 3.0;
+                double ya = centerY - b / 3.0;
+                double xb = centerX - a / 3.0;
+                double yb = centerY + 2*b / 3.0;
+                triangle.Points.Add(new System.Windows.Point(xc, yc));
+                triangle.Points.Add(new System.Windows.Point(xa, ya));
+                triangle.Points.Add(new System.Windows.Point(xb, yb));
+            }
+            else
+            {            
+                double ma = 0.5 * Math.Sqrt(2 * b * b + 2 * c * c - a * a);
+                double ra = (2.0 / 3.0) * ma;
 
-            double xa = centerX;
-            double ya = centerY + ra;
-            double xb = centerX + Math.Sqrt(c * c - (9.0 / 4.0) * ra * ra);
-            double yb = centerY - 0.5 * ra;
-            double xc = 2 * centerX - xb;
-            double yc = yb;
+                double xa = centerX;
+                double ya = centerY + ra;
+                double xb = centerX + Math.Sqrt(c * c - (9.0 / 4.0) * ra * ra);
+                double yb = centerY - 0.5 * ra;
+                double xc = 2 * centerX - xb;
+                double yc = yb;
 
-            triangle.Points.Add(new System.Windows.Point(xa, ya));
-            triangle.Points.Add(new System.Windows.Point(xb, yb));
-            triangle.Points.Add(new System.Windows.Point(xc, yc));
+                triangle.Points.Add(new System.Windows.Point(xa, ya));
+                triangle.Points.Add(new System.Windows.Point(xb, yb));
+                triangle.Points.Add(new System.Windows.Point(xc, yc));
+            }
 
             triangle.Stroke = Brushes.Black;
             triangle.StrokeThickness = 1;
-            
             triangle.Fill = Brushes.Blue;
-
-
-
 
             Canvas.SetLeft(triangle, centerX);
             Canvas.SetTop(triangle, centerY);

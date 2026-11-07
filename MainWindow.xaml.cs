@@ -24,19 +24,36 @@ namespace _7ПрСизов
         public MainWindow()
         {
             InitializeComponent();
-            startProgramm();
+            
         }
-
-        public void startProgramm()
+        int CenterOX;
+        int CenterOY ;
+        int diametr;
+        int CenterTX;
+        int CenterTY;
+        int a;
+        int b;
+        int c;
+        public void startProgramm(int CenterOX, int CenterOY,int diametr, int CenterTX, int CenterTY, int a, int b, int c)
         {
-            Circle circle1 = new Circle(51, 51, 155);
+            Circle circle1 = new Circle(CenterOX, CenterOY, diametr);
             circle1.Draw(canvasPanel);
 
-            Triangle triangle1 = new Triangle(80, 80, 2,3,713);
+            Triangle triangle1 = new Triangle(CenterTX, CenterTY, a, b,c);
             triangle1.Draw(canvasPanel);
         }
 
-
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int CenterOX = int.Parse(textbox1.Text);
+            int CenterOY = int.Parse(textbox2.Text);
+            int diametr = int.Parse(textbox3.Text);
+            int CenterTX = int.Parse(textbox4.Text);
+            int CenterTY = int.Parse(textbox5.Text);
+            int a = int.Parse(textbox6.Text);
+            int b = int.Parse(textbox7.Text);
+            int c = int.Parse(textbox8.Text);
+            startProgramm(CenterOX, CenterOY, diametr, CenterTX, CenterTY, a, b, c);
+        }
     }
 }
