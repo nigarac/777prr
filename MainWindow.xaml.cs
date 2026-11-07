@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using _7ПрСизов.Classes;
 
 namespace _7ПрСизов
 {
@@ -23,6 +24,20 @@ namespace _7ПрСизов
         public MainWindow()
         {
             InitializeComponent();
+            startProgramm();
         }
+
+        public void startProgramm()
+        {
+            Circle circle1 = new Circle(51, 51, 155);
+            circle1.Draw(canvasPanel);
+
+
+            Triangle triangle1 = new Triangle(90, 90, 95, 96, 123, 132, 89, 277);
+            triangle1.Draw(canvasPanel);
+        }
+
+
+        
     }
 }
