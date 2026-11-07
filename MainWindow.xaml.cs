@@ -32,8 +32,7 @@ namespace _7ПрСизов
             Circle circle1 = new Circle(51, 51, 155);
             circle1.Draw(canvasPanel);
 
-
-            Triangle triangle1 = new Triangle(90, 90, 95, 96, 123, 132, 89, 277);
+            Triangle triangle1 = new Triangle(80, 80, 2,3,713);
             triangle1.Draw(canvasPanel);
         }
 
